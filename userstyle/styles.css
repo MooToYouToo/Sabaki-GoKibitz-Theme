@@ -1,0 +1,145 @@
+/* This stylesheet is loaded when Sabaki starts up. */
+
+/* GoKibitz fonts */
+@font-face {
+  font-family: 'Righteous';
+  src: url('righteous.woff');
+}
+@font-face {
+  font-family: 'Oxygen';
+  src: url('oxygen.woff');
+}
+
+body, input, button, select, option, textarea {
+font-family: 'Oxygen';
+}
+
+.shudan-goban-image {
+  /* Board texture */
+  background-image: none;
+  background: #E4BB67;
+}
+
+.shudan-stone-image.shudan-sign_1 {
+  /* Black stone */
+  background-image: url('black_stone.png');
+}
+
+.shudan-stone-image.shudan-sign_-1 {
+  /* White stone */
+  background-image: url('white_stone.png');
+}
+
+/* Disables stone shadow */
+.shudan-vertex:not(.shudan-sign_0) .shudan-shadow {
+    background: none;
+    box-shadow: none;
+}
+
+.shudan-goban {
+	font-family: 'Righteous';
+  --shudan-board-border-width: 0.75em;
+  --shudan-board-border-color: #F2DDB3;
+
+  --shudan-board-background-color: #E4BB67;
+  --shudan-board-foreground-color: #867431;
+
+  --shudan-black-background-color: #222;
+  --shudan-black-foreground-color: none;
+
+  --shudan-white-background-color: #fff;
+  --shudan-white-foreground-color: none;
+}
+
+/* Removes tatami matt background */
+main {
+    background: #1ABC9C;
+}
+
+/* Creates circle marker for recent white move*/
+.shudan-vertex.shudan-marker_point.shudan-sign_-1 .shudan-marker  {
+    left: 50%;
+    top: 50%;
+    width: .45em;
+    height: .45em;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+	border: solid #333333 0.05em;
+}
+
+/* Creates circle marker for recent black move*/
+.shudan-vertex.shudan-marker_point.shudan-sign_1 .shudan-marker  {
+    left: 50%;
+    top: 50%;
+    width: .45em;
+    height: .45em;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+	border: solid #F2F2F2 0.05em;
+}
+	
+/* Board markup */
+.shudan-sign_0 { color: #333333; }
+.shudan-vertex.shudan-sign_-1 .shudan-marker::before, .shudan-vertex.shudan-sign_-1 .shudan-marker::after {
+	color: #333333;
+}
+.shudan-vertex.shudan-sign_1 .shudan-marker::before, .shudan-vertex.shudan-sign_1 .shudan-marker::after {
+	color: #F2F2F2
+}
+.shudan-vertex .shudan-marker::before, .shudan-vertex .shudan-marker::after {
+	border: solid #333333;
+}
+.shudan-line, .shudan-arrow, .shudan-arrow::before, .shudan-arrow::after {
+    background: #176658;	
+}
+
+/* Goban */
+#goban {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+
+/* Game bar with player info*/
+.current { background: #14937a; }
+.edit #edit ul li.selected a { background: #176658; }
+.edit #edit ul li a:hover { background: #72B6AA; }
+.edit #edit ul li a:active { background: #14937a; }
+.edit #bar { background: #14937a; }
+ 
+/* Comments */
+#properties {
+	color: #657071;
+    background: #DBDFE0;
+	box-shadow: none;
+}
+.edit #properties { background: #FFFFFF; }
+#properties .inner .header .edit-button {
+    filter: none;
+}
+
+/* Move tree */
+#graph {
+	background: #16A085;
+	color: #14937a;
+}
+#graph svg .node { stroke: #188974; }
+
+/*Scroll bar*/
+#slider {
+	background: #188974;
+	box-shadow: none;	
+}
+#slider .inner { color: #188974; }
+#slider .inner span {
+	background: #72B6AA;
+	color: #176658;
+}
+#slider a { 
+	background: #176658;
+	color: #5D948A;
+}
+
+/* Win rate graph */
+#winrategraph {
+    box-shadow: none;
+}
+	 
