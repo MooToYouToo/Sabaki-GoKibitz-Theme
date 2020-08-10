@@ -1,2 +1,6 @@
 # Sabaki GoKibitz Theme
-Theme for Sabaki with the style of GoKibitz.com
+Theme for [Sabaki](http://sabaki.yichuanshen.de/) in the style of [GoKibitz.com](http://gokibitz.com/)
+
+![Screenshot](screenshot.png)
+
+## Installation
